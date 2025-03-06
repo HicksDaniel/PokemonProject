@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.pokedex-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+  font-size: 24px;
+}
+.pokedex-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 15px 10px 10px;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}

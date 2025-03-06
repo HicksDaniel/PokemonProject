@@ -1,0 +1,25 @@
+.rbcontainer {
+  display: flex;
+
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  width: 70%;
+  height: 15%;
+}
+
+.rbbuttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.rbtitle {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: red;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  width: 75%;
+}

@@ -1,0 +1,7 @@
+.outlet-container {
+  margin-top: 40px;
+  width: 1280px;
+  height: 100%;
+  background: rgba(200, 200, 200, 1);
+  background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+}

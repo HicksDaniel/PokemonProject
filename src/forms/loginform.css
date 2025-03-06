@@ -1,0 +1,74 @@
+:root {
+  --lightTxt: #e8e9f3;
+  --darkTxt: #272635;
+  --lightBg: #cecece;
+  --darkBg: #a6a6a8;
+  --buttonBlue: #b1e5f2;
+}
+body {
+  background-color: var(--lightBg);
+  color: var(--lightTxt);
+}
+
+.form-container {
+  background-color: var(--darkBg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  width: 40rem;
+  border-width: 12px;
+  border-style: solid;
+  border-color: var(--buttonBlue);
+  border-radius: 15px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  color: var(--lightTxt);
+  height: 5rem;
+  width: 100%;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  height: 35rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.input-form {
+  display: flex;
+  height: 30rem;
+  width: 25rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.input-fields {
+  display: flex;
+  height: 3rem;
+  width: 100%;
+  border: 2px solid black;
+}
+
+.trainertype-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 15rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: var(--darkTxt);
+  color: var(--lightTxt);
+  font-size: 1;
+}
