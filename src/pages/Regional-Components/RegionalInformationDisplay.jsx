@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import SimplePokeDex from "./Regional-Pokedex/SimplePokeDex";
+import RegionalSimplePokeDex from "./Regional-Pokedex/RegionalSimplePokedex";
 import OutputData from "./Regional-DataTables/OutputData";
 import LocationData from "./Regional-Routedex/LocationDataset";
 import { RegionContext } from "../../store/RegionContext";
@@ -9,7 +9,7 @@ import { ButtonContainer } from "./Regional-Routedex/routedexstyles";
 import MapIcon from "@mui/icons-material/Map";
 import BookIcon from "@mui/icons-material/Book";
 
-export default function RegionalInformation() {
+export default function RegionalInformationDisplay() {
   const { region } = useContext(RegionContext);
   const [infoPanel, setInfoPanel] = useState(null);
 
@@ -22,7 +22,7 @@ export default function RegionalInformation() {
     },
     {
       title: "Regional Pokemon",
-      display: <SimplePokeDex />,
+      display: <RegionalSimplePokeDex />,
       icon: <BookIcon />,
     },
   ];
@@ -36,7 +36,7 @@ export default function RegionalInformation() {
       <CustomButton
         key={index}
         endIcon={btn.icon}
-        $width="30%"
+        $size="30%"
         onClick={() => handleClick(btn.display)}
       >
         {btn.title}
@@ -46,7 +46,7 @@ export default function RegionalInformation() {
 
   return (
     <div style={{ backgroundColor: "rgba(70,70,70,0.2)" }}>
-      <ButtonContainer $width="65%">{renderedButtons}</ButtonContainer>
+      <ButtonContainer $size="65%">{renderedButtons}</ButtonContainer>
 
       {infoPanel}
     </div>

@@ -103,6 +103,24 @@ export const CustomRouteTabs = styled(Tabs)`
   width: ${(props) => props.$width};
 `;
 
+export const RegionalPokedexHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+  font-size: 24px;
+`;
+export const RegionalPokedexContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  padding: 15px 10px 10px;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
 // _________________________________________________________________
 
 // REGION_LOOKUP

@@ -9,12 +9,12 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-import { CustomRouteDisplay } from "../RegionPageStyles";
+import { CustomRouteDisplay, CustomRouteTabs } from "../RegionPageStyles";
 
 import { RegionContext } from "../../../store/RegionContext";
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { value, index, ...other } = props;
 
   return (
     <div
@@ -26,7 +26,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <Typography></Typography>
         </Box>
       )}
     </div>
@@ -34,7 +34,6 @@ function TabPanel(props) {
 }
 
 TabPanel.propTypes = {
-  children: PropTypes.node,
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 };
@@ -82,12 +81,12 @@ export default function RouteViewer({ routes }) {
   return (
     <>
       <CustomRouteDisplay>
-        <Tabs
+        <CustomRouteTabs
           orientation="vertical"
           variant="scrollable"
           value={value}
           onChange={handleChange}
-          $width="25%"
+          $size="25%"
         >
           {routes.map((route, i) => (
             <Tab
@@ -98,25 +97,24 @@ export default function RouteViewer({ routes }) {
                 setOnBtn2(route?.name);
                 handleLocalDex(route.url);
               }}
-              $color={onBtn2 === route?.name}
             >
               {route?.name.toUpperCase()}
             </Tab>
           ))}
-        </Tabs>
+        </CustomRouteTabs>
 
         {routes.map((route, i) => (
-          <TabPanel key={route?.name + i} value={route.name} index={i}>
+          <TabPanel key={route?.name + i} value={i + 1} index={i}>
             {route?.name.toUpperCase()}
           </TabPanel>
         ))}
 
-        <Tabs
+        <CustomRouteTabs
           orientation="vertical"
           variant="scrollable"
           value={value}
           onChange={handleChange}
-          $width="25%"
+          $size="25%"
         >
           {routeDex.map((pokemon, i) => (
             <Tab
@@ -127,15 +125,14 @@ export default function RouteViewer({ routes }) {
                 setOnBtn(pokemon?.pokemon?.name);
                 populateDexcard(pokemon?.pokemon?.name, i);
               }}
-              $color={onBtn2 === pokemon?.pokemon?.name}
             >
               {pokemon?.pokemon?.name.toUpperCase()}
             </Tab>
           ))}
-        </Tabs>
+        </CustomRouteTabs>
 
         {routes.map((route, i) => (
-          <TabPanel key={route?.name + i} value={route.name} index={i}>
+          <TabPanel key={route?.name + i} value={i + 1} index={i}>
             {route?.name.toUpperCase()}
           </TabPanel>
         ))}

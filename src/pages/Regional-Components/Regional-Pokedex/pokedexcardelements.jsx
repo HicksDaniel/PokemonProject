@@ -1,7 +1,5 @@
 import { PokemonTypeBubbles } from "../RegionPageStyles";
 
-const typeIcons = {};
-
 const typeColorTheme = {
   bug: "rgba(0, 218, 33, 1)",
   dark: "rgba(2, 0, 30, 1)",
@@ -46,17 +44,18 @@ const backgroundColorTheme = {
 export function GenerateTypeBubble(type, i) {
   return (
     <PokemonTypeBubbles
+      key={type + i}
       $gradient={`linear-gradient(110deg, #444, rgba(68, 68, 68, .8) 25%, #000 25%, #000, 26%, ${typeColorTheme[type]} -50%, #ddd 125%)`}
     >
       <div>{type}</div>
     </PokemonTypeBubbles>
   );
 }
-export function GenerateBackgroundColor(type, i) {
+export function GenerateBackgroundColor(type) {
   return backgroundColorTheme[type];
 }
 
-export function GeneratePokemonDescription(text, i) {
+export function GeneratePokemonDescription(text) {
   const cleanText = text.replace(String.fromCharCode(12), " ");
   return cleanText;
 }

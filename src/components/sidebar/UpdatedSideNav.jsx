@@ -131,7 +131,15 @@ export default function MiniDrawer({ children }) {
           ))}
         </List>
       </Drawer>
-      <Box component="main" sx={{ minHeight: "100vh", flexGrow: 2, p: 3 }}>
+      <Box
+        component="main"
+        sx={{
+          backgroundColor: "rgba(255,255,255,0.5)",
+          minHeight: "100vh",
+          flexGrow: 2,
+          p: 3,
+        }}
+      >
         {children}
       </Box>
     </Box>

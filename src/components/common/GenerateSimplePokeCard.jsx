@@ -10,20 +10,22 @@ import {
 
 export default function generateSimplePokeCard(p, i) {
   return (
-    <CustomPokeCard
-      $color={GenerateBackgroundColor(p.pokemonType[0].type.name)}
-    >
-      <CardHeader
-        title={p.name}
-        subheader={p.pokemonType.map((res) => {
-          return GenerateTypeBubble(res.type.name);
-        })}
-      />
-      <CardContent>
-        <CardMedia component="img" image={p.imageDefault} />
-        <Typography>{GeneratePokemonDescription(p.desc)}</Typography>
-      </CardContent>
-    </CustomPokeCard>
+    <Fragment key={p.name + i}>
+      <CustomPokeCard
+        $color={GenerateBackgroundColor(p.pokemonType[0].type.name)}
+      >
+        <CardHeader
+          title={p.name}
+          subheader={p.pokemonType.map((res) => {
+            return GenerateTypeBubble(res.type.name);
+          })}
+        />
+        <CardContent>
+          <CardMedia component="img" image={p.imageDefault} />
+          <Typography>{GeneratePokemonDescription(p.desc)}</Typography>
+        </CardContent>
+      </CustomPokeCard>
+    </Fragment>
   );
 }
 

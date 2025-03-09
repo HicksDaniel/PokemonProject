@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import CasualPage from "./pages/CasualPage";
+import CasualPage from "./pages/HomePage/CasualPage";
 import AboutPage from "./pages/AboutPage";
-import RegionPage from "./pages/Regional-Components/Region-Nav/RegionPage";
+import RegionPage from "./pages/Regional-Components/RegionPage";
 import LoginForm from "./forms/LoginForm";
 import App from "./App";
 

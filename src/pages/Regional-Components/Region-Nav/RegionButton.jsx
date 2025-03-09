@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { RegionContext } from "../../../store/RegionContext";
 import "./regionbutton.css";
 import ButtonGroup from "@mui/material/ButtonGroup";
@@ -10,11 +10,6 @@ import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
-import styled from "styled-components";
-import {
-  ButtonContainer,
-  CustomButton,
-} from "../Regional-Routedex/routedexstyles";
 
 const RegionList = [
   "kanto",
@@ -46,7 +41,6 @@ const RegionButton = () => {
   };
 
   const handleMenuItemClick = (event, region, index) => {
-    console.log(event);
     setSelectedIndex(index);
     setOpen(false);
     updateRegion(region);

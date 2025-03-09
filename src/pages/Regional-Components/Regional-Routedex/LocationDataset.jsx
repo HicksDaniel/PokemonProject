@@ -8,19 +8,6 @@ import { CustomButton } from "./routedexstyles";
 
 import { ButtonContainer } from "./routedexstyles";
 
-export const removeRegionalStrings = {
-  kanto: "",
-  johto: "",
-  hoenn: "",
-  sinnoh: "",
-  unova: "",
-  kalos: "",
-  alola: "",
-  galar: "",
-  hisui: "",
-  paldea: "",
-};
-
 export default function LocationData() {
   const [visibleComponent, setVisibleComponent] = useState();
   const [onBtn, setOnBtn] = useState("");
@@ -47,9 +34,9 @@ export default function LocationData() {
 
   return (
     <>
-      <ButtonContainer $width="55%">
+      <ButtonContainer $size="55%">
         <CustomButton
-          $width="25%"
+          $size="25%"
           onClick={() => {
             setOnBtn("Routes");
             setVisibleComponent(<RouteViewer routes={routes} />);
@@ -59,7 +46,7 @@ export default function LocationData() {
           Routes
         </CustomButton>
         <CustomButton
-          $width="25%"
+          $size="25%"
           onClick={() => {
             setOnBtn("Towns and Cities");
             setVisibleComponent(
@@ -71,7 +58,7 @@ export default function LocationData() {
           Towns and Cities
         </CustomButton>
         <CustomButton
-          $width="25%"
+          $size="25%"
           onClick={() => {
             setOnBtn("Other Locations");
             setVisibleComponent(<OtherLocationViewer others={others} />);

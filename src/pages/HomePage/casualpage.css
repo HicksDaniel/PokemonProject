@@ -3,18 +3,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 90vh;
-  width: 75rem;
-  padding: auto;
+  height: 100%;
+  width: 90%;
+  padding: 20px;
   margin: auto;
 }
 
 .title-container {
   display: flex;
   align-self: flex-start;
-  background-color: grey;
-  border: 3px solid rgb(8, 0, 90);
-  border-radius: 8rem;
+  background-color: rgba(0, 0, 0, 0.65);
+  border: 2px solid rgba(8, 0, 90);
+  border-radius: 20px;
   text-shadow: 3px 3px 3px black;
 }
 
@@ -24,15 +24,6 @@
   justify-content: center;
   align-items: center;
   color: rgb(151, 125, 255);
-}
-
-.card-group-container {
-  display: flex;
-  position: absolute;
-  transform: translate(0, 80%);
-  height: 40%;
-  width: 1060px;
-  justify-content: space-between;
 }
 
 .card-container {
